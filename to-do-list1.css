@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+section{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.container{
+   min-height: 100vh;
+    width: 100%;
+    background:linear-gradient(135deg, #151777, #5a076e);
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px; 
+     padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+
+.todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(231, 213, 230);
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    
+}
+button{
+    display: flex;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #5a076e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 1;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+   
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;    
+}
+.greeting .title {
+	display: flex;
+}
+
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked1.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background:  lightgray;
+}
+h3{
+    
+    font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+main {
+    display: block;
+}
+.title {
+    display: flex;
+    font-size: 2rem;
+    margin-left: 1;
+    color: #5a076e;
+    margin-bottom: 0.5rem;
+}
+.todo {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.title input {
+    min-width: 0px;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(90, 7, 110);
+    flex: 1 1 0%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.create input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    background-color: rgb(231, 213, 230);
+    padding: 1rem;
+    border-radius: 2px;
+}
+.create .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    cursor: pointer;
+    grid-gap: 1.5rem;
+}
+.create .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(231, 213, 230);
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    
+}
+input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+    font-size: 20px;
+    color: blue;
+}
+
+.create .options label div {
+	
+	font-size: 1.125rem;
+	margin-top: 1rem;
+}
+input[type="radio"]{
+    display: none;
+}
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+    border-radius: 999px;
+    border: 3px solid rgb(0, 0, 255);
+    border-color: blue;
+} 
+.bubble.bus{
+    border-color:  rgb(0, 0, 255);
+}
+ .bubble.per{
+    border-color: rgb(233, 79, 105);
+}
+.bubble::after{
+    content:"";
+    display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px; 
+	 background-color: rgb(0, 0, 255);
+	 border-radius: 999px; 
+	 transition: 0.2s ease-in-out;
+}
+
+.bubble.per::after {
+	background-color: rgb(233, 79, 105); 
+ }
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+.name1{
+    margin-top: 0;
+}
+#content{
+    border-radius: 30px;
+}
