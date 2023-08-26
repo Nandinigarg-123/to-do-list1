@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+   
+    <div class="container">
+       
+        <div class="todo" style="margin-top:0px">
+            
+            <main class="app">
+                <section class="greeting">
+                    <h2 class="title">
+                        What's Up, <input type="text" id="name" placeholder="Name Here">
+        
+                    </h2>
+                </section>
+                <section class="create">
+              <h3>CREATE A TO-DO</h3>
+               <form action="" id="new-todo">
+                    <h4>What's on your todo list?</h4>
+                    <div class="row ">
+                    <input type="text" id="content" name="content" placeholder="eg. make a video">
+                     <button onclick="f()" class="name1" id="name1">Done</button>
+                    </div>
+                    <h4>Pick a Categpory</h4>
+                    <div class="options">
+                        <label >
+                            <input type="radio" name="category" id="category1" value="Business">
+                             <span class="bubble bus"> </span>
+                                <div>Business</div>
+                           
+                        </label>
+    
+                        <label >
+                            <input type="radio" name="category" id="category2" value="personal">
+                            <span class="bubble per"></span>
+                                <div>Personal</div>
+                            
+                        </label>
+    
+                    </div>
+                 </form>
+                </section>
+           
+            
+            <section  class="todo1" style="margin-top: 2rem;">
+                <h2>To-Do List <img src="to-do-list-icon-to-do-list-icon-vector-flat-design-157384359.webp" height="25px"></h2>
+                <div class="row">
+                  <input type="text" id="input-box" placeholder="What do you have planned?">
+                  <button onclick="AddTask()">Add</button>
+              </div>
+              <h3>Today's tasks</h3>
+              <ul id="list-container">
+               
+              </ul>
+              
+              </section>
+              
+          
+        </main>
+    <script src="js1.js"></script>
+</body>
+</html>
